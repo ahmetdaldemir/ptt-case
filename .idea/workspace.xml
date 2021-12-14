@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="404a8f6b-e2dd-4e04-bdd6-d2b1bb71af52" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Akakce.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Akakce.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/Google.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Google.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +45,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1639518688150</updated>
-      <workItem from="1639518689406" duration="394000" />
+      <workItem from="1639518689406" duration="909000" />
     </task>
     <servers />
   </component>

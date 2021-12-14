@@ -11,7 +11,8 @@ class Akakce implements ICommerce
 
     public function __construct()
     {
-        $this->products = json_decode(file_get_contents('Storage/products.json'));
+        $newProducts = json_decode(file_get_contents('Storage/products.json'),TRUE);
+        $this->unsetEmptyItem($newProducts);
     }
 
     public function build(): string
@@ -19,12 +20,17 @@ class Akakce implements ICommerce
         $xml = new SimpleXMLElement('<xml />');
         foreach ($this->products as $product) {
             $track = $xml->addChild('product');
-            $track->addChild('name', $product->name);
-            $track->addChild('sku', $product->id);
-            $track->addChild('price', $product->price);
-            $track->addChild('productCategory', $product->category);
+            $track->addChild('name', $product['name']);
+            $track->addChild('sku', $product['id']);
+            $track->addChild('price', $product['price']);
+            $track->addChild('productCategory', $product['category']);
         }
         Header('Content-type: text/xml');
         return $xml->asXML();
+    }
+
+    public function unsetEmptyItem(array $newProducts)
+    {
+        $this->products = array_filter($newProducts);
     }
 }
