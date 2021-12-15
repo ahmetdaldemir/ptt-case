@@ -9,13 +9,21 @@ include('Contract/ICommerce.php');
 include('Services/Akakce.php');
 include('Services/Google.php');
 
-if ($slug == 'akakce') {
-    $x = new Akakce();
-    $x = $x->build();
-    echo $x;
-}else if($slug == 'google')
-{
-    $x = new Google();
-    $x = $x->build();
-    echo $x;
+switch ($slug) {
+    case "akakce":
+        $x = new Akakce();
+        $x = $x->build();
+        echo $x;
+        break;
+    case "google":
+        $x = new Google();
+        $x = $x->build();
+        echo $x;
+        break;
+    default:
+        $xml = new SimpleXMLElement('<xml />');
+        $track = $xml->addChild('errors');
+        $track->addChild('error', '<![CDATA[ "Bulunamadı" ]]>');
+        echo $xml->asXML();
+        break;
 }
