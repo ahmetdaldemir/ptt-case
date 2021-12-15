@@ -29,7 +29,6 @@ class Google implements ICommerce
             $track->addChild('g:price', $product['price']);
             $track->addChild('g:google_product_category', $product['category']);
         }
-        Header('Content-type: text/xml');
         return $xml->asXML();
     }
 

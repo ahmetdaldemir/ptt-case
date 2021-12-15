@@ -3,6 +3,7 @@
 use Services\Akakce;
 use Services\Google;
 
+Header('Content-type: text/xml');
 
 include('Contract/ICommerce.php');
 include('Services/Akakce.php');

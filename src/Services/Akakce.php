@@ -25,7 +25,6 @@ class Akakce implements ICommerce
             $track->addChild('price', $product['price']);
             $track->addChild('productCategory', $product['category']);
         }
-        Header('Content-type: text/xml');
         return $xml->asXML();
     }
 
