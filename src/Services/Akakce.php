@@ -11,6 +11,7 @@ class Akakce implements ICommerce
 
     public function __construct()
     {
+        if(!class_exists('SimpleXMLElement')) die("SimpleXMLElement Not Found");
         $newProducts = json_decode(file_get_contents('Storage/products.json'),TRUE);
         $this->products = $this->unsetEmptyItem($newProducts);
     }
