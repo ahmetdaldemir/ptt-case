@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Akakce.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Akakce.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/Google.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Google.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/locator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/locator.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +46,7 @@
       <option name="presentableId" value="Default" />
       <updated>1639518688150</updated>
       <workItem from="1639518689406" duration="1312000" />
-      <workItem from="1639551043771" duration="641000" />
+      <workItem from="1639551043771" duration="738000" />
     </task>
     <servers />
   </component>

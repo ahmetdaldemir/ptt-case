@@ -20,10 +20,10 @@ class Akakce implements ICommerce
         $xml = new SimpleXMLElement('<xml />');
         foreach ($this->products as $product) {
             $track = $xml->addChild('product');
-            $track->addChild('name', $product['name']);
-            $track->addChild('sku', $product['id']);
-            $track->addChild('price', $product['price']);
-            $track->addChild('productCategory', $product['category']);
+            $track->addChild('name', $product['name'] ?? NULL);
+            $track->addChild('sku', $product['id'] ?? NULL);
+            $track->addChild('price', $product['price'] ?? NULL);
+            $track->addChild('productCategory', $product['category'] ?? NULL);
         }
         return $xml->asXML();
     }
