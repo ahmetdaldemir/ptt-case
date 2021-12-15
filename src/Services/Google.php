@@ -15,7 +15,7 @@ class Google implements ICommerce
     public function __construct()
     {
         $newProducts = json_decode(file_get_contents('Storage/products.json'),TRUE);
-        $this->unsetEmptyItem($newProducts);
+        $this->products = $this->unsetEmptyItem($newProducts);
     }
 
 
@@ -34,7 +34,7 @@ class Google implements ICommerce
 
     public function unsetEmptyItem(array $newProducts)
     {
-        $this->products = array_filter($newProducts);
+        return array_filter($newProducts);
     }
 
 }

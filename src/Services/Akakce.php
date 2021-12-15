@@ -12,7 +12,7 @@ class Akakce implements ICommerce
     public function __construct()
     {
         $newProducts = json_decode(file_get_contents('Storage/products.json'),TRUE);
-        $this->unsetEmptyItem($newProducts);
+        $this->products = $this->unsetEmptyItem($newProducts);
     }
 
     public function build(): string
@@ -30,6 +30,6 @@ class Akakce implements ICommerce
 
     public function unsetEmptyItem(array $newProducts)
     {
-        $this->products = array_filter($newProducts);
+        return array_filter($newProducts);
     }
 }
